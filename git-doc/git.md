@@ -21,3 +21,37 @@ $ mkdir firstgit
 $ cd firstgit
 $ git init
 ```
+
+把文件添加到仓库
+```sh
+$ git add readme.txt
+$ git add file1.txt, file2.txt
+$ git add . #添加所有文件
+```
+把文件提交到仓库
+```sh
+$ git commit -m "add a new file "
+```
+
+查看git状态
+```sh
+$ git status
+```
+
+对比本地仓库文件的修改
+```sh
+$ git diff a.txt
+```
+
+查看历史记录
+```sh
+$ git log
+```
+
+版本回退
+```sh
+$ git reset --hard HEAD^
+$ git reset --hard HEAD^^
+$ git reset --hard HEAD~100
+$ git reset --hard 3628164
+```
