@@ -108,6 +108,8 @@
 
 `$ git merge dev`
 
+`$ git merge origin/dev` 在本地分支上合并远程分支先fetch
+
 **删除dev分支**
 
 `$ git branch -d dev`
