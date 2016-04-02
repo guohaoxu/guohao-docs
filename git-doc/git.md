@@ -2,8 +2,8 @@
 ---
 #### linux系统：
 
-> ```
-sudo apt-get install git
+```
+> sudo apt-get install git
 ```
 > aa bb cc
 
