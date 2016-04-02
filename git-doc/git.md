@@ -1,35 +1,60 @@
 ### git常用命令
+---
+#### linux系统：
 
-linux系统：
+`sudo apt-get install git`
 
-        `sudo apt-get install git`
+`./config`
 
-        `./config`
+`make`
 
-        `make`
+`sudo make install`
 
-        `sudo make install`
+#### 设置
 
-设置`$ git config --global user.name "guohao"`,`$ git config --global user.email "guohao0817@gmail.com"`
+`$ git config --global user.name "guohao"`
 
-创建SSH Key `$ ssh-keygen -t rsa -C "guohao0817@gmail.com"`
-如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥
+`$ git config --global user.email "guohao0817@gmail.com"`
 
-要关联一个远程库，使用命令`git remote add origin git@github:guohaoxu/guohaoxu.git`
+#### 创建SSH Key
 
-使用命令`git push -u origin master`第一次推送master分支的所有内容
+`$ ssh-keygen -t rsa -C "guohao0817@gmail.com"`
 
-每次本地提交后，只要有必要，就可以使用命令`git push origin master`推送最新修改
+在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥
 
-用命令`$ git clone git@github.com:guohaoxu/guohao-blog.git`克隆一个远程库
+#### 关联一个远程库
 
-创建版本库`$ mkdir firstgit`, `$ cd firstgit`, `$ git init`
+`git remote add origin git@github:guohaoxu/guohaoxu.git`
 
-把文件添加到仓库`$ git add readme.txt`, `$ git add file1.txt, file2.txt`, `$ git add . #添加所有文件`
+`git push -u origin master` 第一次推送master分支
 
-把文件提交到仓库`$ git commit -m "add a new file "`
+#### 克隆一个远程库
 
-查看git状态`$ git status`
+`$ git clone git@github.com:guohaoxu/guohao-blog.git`
+
+#### 创建版本库
+
+`$ mkdir firstgit`
+
+`$ cd firstgit`
+
+`$ git init`
+
+#### 添加文件到仓库暂存区
+
+`$ git add readme.txt`
+
+`$ git add file1.txt, file2.txt`
+
+`$ git add .` #添加所有文件
+
+#### 提交文件到仓库
+
+`$ git commit -m "add a new file "`
+
+#### 查看git状态
+
+`$ git status`
 
 对比本地仓库文件的修改`$ git diff a.txt`
 
