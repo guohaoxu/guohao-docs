@@ -105,24 +105,38 @@
 
 `$ git branch -d dev`
 
-拉取远程仓库合并到本地`git pull origin master`
+#### 拉取远程仓库
 
-如果合并有冲突，则解决冲突，并在本地提交；
+`git pull origin branch-name`
 
-没有冲突或者解决掉冲突后，再用`git push origin branch-name`推送就能成功！
+没有冲突或者解决掉冲突后
 
-如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令`git branch --set-upstream branch-name origin/branch-name`
+`git push origin branch-name` 推送成功
 
-命令`git tag <name>`用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+### 标签tag
 
-`git tag -a <tagname> -m "blablabla..."`可以指定标签信息；
+#### 新建一个标签
 
-命令`git tag`可以查看所有标签。
+`git tag <name>`
 
-命令`git push origin <tagname>`可以推送一个本地标签
+`git tag -a <tagname> -m "blablabla..."` 可以指定标签信息
 
-命令`git push origin --tags`可以推送全部未推送过的本地标签
+#### 查看所有标签
 
-命令`git tag -d <tagname>`可以删除一个本地标签
+`git tag`
 
-命令`git push origin :refs/tags/<tagname>`可以删除一个远程标签
+#### 推送本地标签到远程仓库
+
+`git push origin <tagname>`
+
+#### 推送全部本地标签
+
+`git push origin --tags`
+
+#### 删除本地标签
+
+`git tag -d <tagname>`
+
+#### 删除远程标签
+
+`git push origin :refs/tags/<tagname>`
