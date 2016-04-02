@@ -2,7 +2,10 @@
 
 `$ git`
 
-linux系统：`sudo apt-get install git`,可以通过源码安装,下载源码，解压，输入：
+linux系统：
+
+`sudo apt-get install git`
+
 `./config`,`make`,`sudo make install`
 
 设置`$ git config --global user.name "guohao"`,`$ git config --global user.email "guohao0817@gmail.com"`
