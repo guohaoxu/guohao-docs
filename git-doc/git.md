@@ -24,9 +24,9 @@
 
 #### 关联一个远程库
 
-**`git remote add origin git@github:guohaoxu/guohaoxu.git`**
+**`$ git remote add origin git@github:guohaoxu/guohaoxu.git`**
 
-**`git push -u origin master`** 第一次推送master分支
+**`$ git push -u origin master`** 第一次推送master分支
 
 #### 克隆一个远程库
 
@@ -108,36 +108,36 @@
 
 #### 拉取远程仓库分支
 
-**`git pull origin branch-name`**
+**`$ git pull origin branch-name`**
 
 没有冲突或者解决掉冲突后
 
-**`git push origin branch-name`** 推送成功
+**`$ git push origin branch-name`** 推送成功
 
 ---
 
 #### 新建一个标签
 
-**`git tag <name>`**
+**`$ git tag <name>`**
 
-**`git tag -a <tagname> -m "blablabla..."`** 指定标签信息
+**`$ git tag -a <tagname> -m "blablabla..."`** 指定标签信息
 
 #### 查看所有标签
 
-**`git tag`**
+**`$ git tag`**
 
 #### 推送本地标签到远程仓库
 
-**`git push origin <tagname>`**
+**`$ git push origin <tagname>`**
 
 #### 推送全部本地标签
 
-**`git push origin --tags`**
+**`$ git push origin --tags`**
 
 #### 删除本地标签
 
-**`git tag -d <tagname>`**
+**`$ git tag -d <tagname>`**
 
 #### 删除远程标签
 
-**`git push origin :refs/tags/<tagname>`**
+**`$ git push origin :refs/tags/<tagname>`**
