@@ -126,17 +126,17 @@
 
 **取回远程库所有分支更新**
 
-`git fetch origin`
+`$ git fetch origin`
 
-`git fetch origin master` 取回特定分支
+`$ git fetch origin master` 取回特定分支
 
-`git branch -r` 查看远程分支
+`$ git branch -r` 查看远程分支
 
-`git branch -a` 查看所有分支
+`$ git branch -a` 查看所有分支
 
-`git push origin :test` 删除远程分支
+`$ git push origin :test` 删除远程分支
 
-`git push origin --delete test` 删除远程分支
+`$ git push origin --delete test` 删除远程分支
 
 没有冲突或者解决掉冲突后
 
