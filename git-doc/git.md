@@ -2,19 +2,17 @@
 ---
 **linux系统**
 
-`sudo apt-get install git`
+`sudo apt-get install git-core` ubuntu
 
-`./config`
-
-`make`
-
-`sudo make install`
+`sudo yum install git-core` centos
 
 **设置**
 
-`$ git config --global user.name "guohao"`
+`$ git config --global user.name "username"`
 
-`$ git config --global user.email "guohao0817@gmail.com"`
+`$ git config --global user.email "username@qq.com"`
+
+`$ git config --list"` 查看设置信息
 
 **创建SSH Key**
 
@@ -40,6 +38,14 @@
 
 `$ git init`
 
+**查看git状态**
+
+`$ git status`
+
+**查看git日志**
+
+`$ git log`
+
 **添加文件到仓库暂存区**
 
 `$ git add readme.txt`
@@ -51,10 +57,6 @@
 **提交文件到仓库**
 
 `$ git commit -m "add a new file "`
-
-**查看git状态**
-
-`$ git status`
 
 **对比工作区文件与仓库文件**
 
