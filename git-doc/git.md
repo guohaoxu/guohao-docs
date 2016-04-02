@@ -1,14 +1,14 @@
 ### git常用命令
 
-```shell
-$ git
-```
-
 linux系统：
 
-`sudo apt-get install git`
+        `sudo apt-get install git`
 
-`./config`,`make`,`sudo make install`
+        `./config`
+
+        `make`
+
+        `sudo make install`
 
 设置`$ git config --global user.name "guohao"`,`$ git config --global user.email "guohao0817@gmail.com"`
 
