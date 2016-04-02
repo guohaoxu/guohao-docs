@@ -1,11 +1,10 @@
 ### git常用命令
 ---
-#### linux系统：
+**linux系统**
 
+>```
+sudo apt-get install git
 ```
-> sudo apt-get install git
-```
-> aa bb cc
 
 `./config`
 
