@@ -108,9 +108,11 @@
 
 `$ git branch -d dev`
 
-**拉取远程仓库分支**
+**取回远程仓库分支 与本地分支合并**
 
-`$ git pull origin branch-name`
+`$ git pull origin master:master`
+
+`$ git pull origin master` 与本地的当前分支合并
 
 没有冲突或者解决掉冲突后
 
