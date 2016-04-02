@@ -1,6 +1,8 @@
 ### git常用命令
 
-`$ git`
+```shell
+$ git
+```
 
 linux系统：
 
