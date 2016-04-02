@@ -56,31 +56,56 @@
 
 `$ git status`
 
-对比本地仓库文件的修改`$ git diff a.txt`
+#### 对比工作区文件与仓库文件
 
-查看历史记录`$ git log`
+`$ git diff a.txt`
 
-版本回退 `$ git reset --hard HEAD^`, `$ git reset --hard HEAD^^`, `$ git reset --hard HEAD~100`, `$ git reset --hard 3628164`
+#### 查看历史记录
 
-让这个文件回到最近一次`git commit`或`git add`时的状态 `$ git checkout -- readme.md`
+`$ git log`
 
-从版本库中删除该文件,用命令`$ git rm test.txt`, `$ git commit -m "remove test.txt"`
+#### 版本回退
 
-创建dev分支，然后切换到dev分支：`$ git checkout -b dev`
+`$ git reset --hard HEAD^`
 
-`git checkout`命令加上-b参数表示创建并切换，相当于以下两条命令：`$ git branch dev`, `$ git checkout dev`
+`$ git reset --hard HEAD^^`
 
-查看当前分支 `$ git branch`
+`$ git reset --hard HEAD~100`
 
-把dev分支的工作成果合并到master分支上：`$ git merge dev`
+`$ git reset --hard 3628164`
 
-删除dev分支 `$ git branch -d dev`
+#### 文件回到最近一次仓库或暂存区
 
-多人协作的工作模式通常是这样：
+`git commit` 或 `git add`
 
-首先，可以试图用`git push origin branch-name`推送自己的修改；
+`$ git checkout -- readme.md`
 
-如果推送失败，则因为远程分支比你的本地更新，需要先用`git pull`试图合并；
+#### 从版本库中删除该文件
+
+`$ git rm test.txt`
+
+`$ git commit -m "remove test.txt"`
+
+####分支
+---
+
+#### 创建并切换dev分支
+
+`$ git checkout -b dev` 相当于以下两条命令：`$ git branch dev`, `$ git checkout dev`
+
+#### 查看当前分支
+
+`$ git branch`
+
+#### 把dev分支合并到master分支上
+
+`$ git merge dev`
+
+#### 删除dev分支
+
+`$ git branch -d dev`
+
+拉取远程仓库合并到本地`git pull origin master`
 
 如果合并有冲突，则解决冲突，并在本地提交；
 
