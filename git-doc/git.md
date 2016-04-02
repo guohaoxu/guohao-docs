@@ -1,6 +1,6 @@
 ### git常用命令
 ---
-#### linux系统
+**linux系统**
 
 `sudo apt-get install git`
 
@@ -10,29 +10,29 @@
 
 `sudo make install`
 
-#### 设置
+**设置**
 
 `$ git config --global user.name "guohao"`
 
 `$ git config --global user.email "guohao0817@gmail.com"`
 
-#### 创建SSH Key
+**创建SSH Key**
 
 `$ ssh-keygen -t rsa -C "guohao0817@gmail.com"`
 
 在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥
 
-#### 关联一个远程库
+**关联一个远程库**
 
 `$ git remote add origin git@github:guohaoxu/guohaoxu.git`
 
 `$ git push -u origin master` 第一次推送master分支
 
-#### 克隆一个远程库
+**克隆一个远程库**
 
 `$ git clone git@github.com:guohaoxu/guohao-blog.git`
 
-#### 创建版本库
+**创建版本库**
 
 `$ mkdir firstgit`
 
@@ -40,7 +40,7 @@
 
 `$ git init`
 
-#### 添加文件到仓库暂存区
+**添加文件到仓库暂存区**
 
 `$ git add readme.txt`
 
@@ -48,23 +48,23 @@
 
 `$ git add .` 添加所有文件
 
-#### 提交文件到仓库
+**提交文件到仓库**
 
 `$ git commit -m "add a new file "`
 
-#### 查看git状态
+**查看git状态**
 
 `$ git status`
 
-#### 对比工作区文件与仓库文件
+**对比工作区文件与仓库文件**
 
 `$ git diff a.txt`
 
-#### 查看历史记录
+**查看历史记录**
 
 `$ git log`
 
-#### 版本回退
+**版本回退**
 
 `$ git reset --hard HEAD^`
 
@@ -74,11 +74,11 @@
 
 `$ git reset --hard 3628164`
 
-#### 文件回到最近一次仓库或暂存区
+**文件回到最近一次仓库或暂存区**
 
 `$ git checkout -- readme.md`
 
-#### 从版本库中删除该文件
+**从版本库中删除该文件**
 
 `$ git rm test.txt`
 
@@ -86,7 +86,7 @@
 
 ---
 
-#### 创建并切换dev分支
+**创建并切换dev分支**
 
 `$ git checkout -b dev` 相当于以下两条命令
 
@@ -94,19 +94,19 @@
 
 `$ git checkout dev`
 
-#### 查看当前分支
+**查看当前分支**
 
 `$ git branch`
 
-#### 把dev分支合并到master分支上
+**把dev分支合并到master分支上**
 
 `$ git merge dev`
 
-#### 删除dev分支
+**删除dev分支**
 
 `$ git branch -d dev`
 
-#### 拉取远程仓库分支
+**拉取远程仓库分支**
 
 `$ git pull origin branch-name`
 
@@ -116,28 +116,28 @@
 
 ---
 
-#### 新建一个标签
+**新建一个标签**
 
 `$ git tag <name>`
 
 `$ git tag -a <tagname> -m "blablabla..."` 指定标签信息
 
-#### 查看所有标签
+**查看所有标签**
 
 `$ git tag`
 
-#### 推送本地标签到远程仓库
+**推送本地标签到远程仓库**
 
 `$ git push origin <tagname>`
 
-#### 推送全部本地标签
+**推送全部本地标签**
 
 `$ git push origin --tags`
 
-#### 删除本地标签
+**删除本地标签**
 
 `$ git tag -d <tagname>`
 
-#### 删除远程标签
+**删除远程标签**
 
 `$ git push origin :refs/tags/<tagname>`
