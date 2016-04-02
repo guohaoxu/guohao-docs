@@ -16,7 +16,7 @@
 
 **创建SSH Key**
 
-`$ ssh-keygen -t rsa -C "guohao0817@gmail.com"`
+`$ ssh-keygen -t rsa -C "youremail@qq.com"`
 
 在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥
 
