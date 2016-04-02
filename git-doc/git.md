@@ -102,6 +102,8 @@
 
 `$ git branch -d dev`
 
+---
+
 **克隆一个远程库**
 
 `$ git clone git@github.com:guohaoxu/guohao-blog.git`
