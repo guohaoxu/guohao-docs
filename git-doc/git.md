@@ -20,20 +20,6 @@
 
 在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥
 
-**关联一个远程库**
-
-`$ git remote add origin git@github.com:guohaoxu/guohao-docs.git`
-
-`$ git remote rm origin` 删除关联远程库
-
-`$ git remote -v` 查看远程库
-
-`$ git push -u origin master` 第一次推送master分支
-
-**克隆一个远程库**
-
-`$ git clone git@github.com:guohaoxu/guohao-blog.git`
-
 **创建版本库**
 
 `$ mkdir firstgit`
@@ -113,6 +99,20 @@
 **删除dev分支**
 
 `$ git branch -d dev`
+
+**克隆一个远程库**
+
+`$ git clone git@github.com:guohaoxu/guohao-blog.git`
+
+**关联一个远程库**
+
+`$ git remote add origin git@github.com:guohaoxu/guohao-docs.git`
+
+`$ git remote rm origin` 删除关联远程库
+
+`$ git remote -v` 查看远程库
+
+`$ git push -u origin master` 第一次推送master分支
 
 **取回远程仓库分支 自动与本地分支合并**
 
