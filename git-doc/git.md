@@ -22,7 +22,11 @@
 
 **关联一个远程库**
 
-`$ git remote add origin git@github:guohaoxu/guohaoxu.git`
+`$ git remote add origin git@github.com:guohaoxu/guohao-docs.git`
+
+`$ git remote rm origin` 删除关联远程库
+
+`$ git remote -v` 查看远程库
 
 `$ git push -u origin master` 第一次推送master分支
 
@@ -108,11 +112,25 @@
 
 `$ git branch -d dev`
 
-**取回远程仓库分支 与本地分支合并**
+**取回远程仓库分支 自动与本地分支合并**
 
 `$ git pull origin master:master`
 
 `$ git pull origin master` 与本地的当前分支合并
+
+**取回远程库所有分支更新**
+
+`git fetch origin`
+
+`git fetch origin master` 取回特定分支
+
+`git branch -r` 查看远程分支
+
+`git branch -a` 查看所有分支
+
+`git push origin :test` 删除远程分支
+
+`git push origin --delete test` 删除远程分支
 
 没有冲突或者解决掉冲突后
 
