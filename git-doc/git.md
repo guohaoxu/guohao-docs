@@ -48,6 +48,8 @@
 
 `$ git commit -m "add a new file "`
 
+`$ git commit -a -m "add a new file "` 自动检测修改的文件提交
+
 **对比工作区文件与仓库文件**
 
 `$ git diff a.txt`
