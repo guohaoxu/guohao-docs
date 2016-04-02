@@ -136,6 +136,8 @@
 
 `git push origin :test` 删除远程分支
 
+`git branch -r -d origin/branch-name` 删除远程分支
+
 `git push origin --delete test` 删除远程分支
 
 没有冲突或者解决掉冲突后
