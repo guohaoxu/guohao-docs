@@ -2,9 +2,12 @@
 ---
 **linux系统**
 
-**`sudo apt-get install git`**
-
-`./config`
+**```
+sudo apt-get install git
+```**
+**```
+./config
+```**
 
 `make`
 
