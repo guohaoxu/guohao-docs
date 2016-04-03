@@ -1,5 +1,5 @@
-### git常用命令
----
+# git常用命令
+
 **linux系统安装**
 
 `sudo apt-get install git-core` ubuntu
