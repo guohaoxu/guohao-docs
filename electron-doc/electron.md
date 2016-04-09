@@ -5,7 +5,7 @@ npm install electron-packager -g
 ```
 
 ```bash
-electron .
+electron-packager ./ guohao-words --platform=win32 --arch=ia32
 ```
 
 ```bash
