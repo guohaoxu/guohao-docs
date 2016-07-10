@@ -2,9 +2,9 @@
 
 **linux系统安装**
 
-`sudo apt-get install git-core` ubuntu
+`sudo apt install git` ubuntu
 
-`sudo yum install git-core` centos
+`sudo yum install git` centos
 
 **设置**
 
