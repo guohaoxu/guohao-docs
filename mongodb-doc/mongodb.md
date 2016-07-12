@@ -16,44 +16,40 @@ mongod
 ```bash
 mongo
 show dbs	#显示数据库
-use test	//使用test数据库
-db.dropDatabase	//删除数据库
-db.collection.drop()	//删除集合
+use test	#使用test数据库
+db.dropDatabase		#删除数据库
+db.collection.drop()	#删除集合
 ```
+
 #### Create Operations
-> db.collection.insert()
-
-> db.collection.insertOne()
-
-> db.collection.insertMany()
-
-> db.users.insert({name: "sue", age: 26, status: "A"})
-
-> db.users.insertMany([{name: "sue", age: 26, status: "A"}, {name: "suee", age: 28, status: "B"}])
+```bash
+db.collection.insert()
+db.collection.insertOne()
+db.collection.insertMany()
+db.users.insert({name: "sue", age: 26, status: "A"})
+db.users.insertMany([{name: "sue", age: 26, status: "A"}, {name: "suee", age: 28, status: "B"}])
+```
 
 #### Read Operations
-> db.collection.find()
-
-> db.collection.findOne()
-
-> db.users.find({age: {$gt: 18}}, {name: 1, address: 1}).limit(5)
+```bash
+db.collection.find()
+db.collection.findOne()
+db.users.find({age: {$gt: 18}}, {name: 1, address: 1}).limit(5)
+```
 
 #### Update Operations
-> db.collection.update()
-
-> db.collection.updateOne()
-
-> db.collection.updateMany()
-
-> db.collection.replaceOne()
-
-> db.users.update({age: {$gt: 18}}, {$set: {status: "A"}}, {multi: true})
+```bash
+db.collection.update()
+db.collection.updateOne()
+db.collection.updateMany()
+db.collection.replaceOne()
+db.users.update({age: {$gt: 18}}, {$set: {status: "A"}}, {multi: true})
+```
 
 #### Delete Operations
-> db.collection.remove()
-
-> db.collection.deleteOne()
-
-> db.collection.deleteMany()
-
-> db.collection.remove({status: "D"})
+```bash
+db.collection.remove()
+db.collection.deleteOne()
+db.collection.deleteMany()
+db.collection.remove({status: "D"})
+```
