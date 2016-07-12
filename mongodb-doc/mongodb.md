@@ -1,15 +1,13 @@
 # mongodb常用命令
 ### linux 安装
-> `curl -O https://fastdl.mongodb.org/linux/mongodb-linux-i686-3.2.7.tgz`
-> `tar -zxvf mongodb-linux-86_64-amazon-3.2.7.tgz`
-
-> `mv mongodb-linux-x86_64-3.2.7 /usr/local/mongodb`
-
-> `export PATH=/usr/local/mongodb/bin:$PATH`
-
-> `sudo mkdir -p /data/db`
-
-> `mongod`
+```
+curl -O https://fastdl.mongodb.org/linux/mongodb-linux-i686-3.2.7.tgz
+tar -zxvf mongodb-linux-86_64-amazon-3.2.7.tgz
+mv mongodb-linux-x86_64-3.2.7 /usr/local/mongodb
+export PATH=/usr/local/mongodb/bin:$PATH
+sudo mkdir -p /data/db
+mongod
+```
 
 ### windows添加到环境变量
 > 电脑 属性 高级系统设置 高级 环境变量 系统变量 path 编辑 添加 ;C:\Program Files\MongoDB\Server\3.2\bin\
