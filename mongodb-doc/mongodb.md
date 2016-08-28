@@ -138,22 +138,19 @@ var url = 'mongodb://localhost:27017/myproject'
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err)
   console.log("Connected correctly to server")
-  
+
   // Insert document
   db.collection('users').insertOne({a:1}, function(err, r) {
-    assert.equal(null, err)
     assert.equal(1, r.insertedCount)
     db.close()
   })
   db.collection('users').insertMany([{a:2}, {a:3}], function(err, r) {
-    assert.equal(null, err)
     assert.equal(2, r.insertedCount)
     db.close()
   })
-  
+
   // Update documents
   db.collection('users').updateOne({a:1}, {$set: {b: 1}}, function(err, r) {
-    assert.equal(null, err)
     assert.equal(1, r.matchedCount)
     assert.equal(1, r.modifiedCount)
   })
@@ -166,30 +163,27 @@ MongoClient.connect(url, function(err, db) {
       db.close()
     }
   )
-  
+
   //Removing Documents
   db.collection('users').deleteOne({a:1}, function(err, r) {
-    assert.equal(null, err)
     assert.equal(1, r.deletedCount)
   })
-  
+
   db.collection('users').findOneAndUpdate({a:1}, {$set: {b: 1}},
     {
       returnOriginal: false,
       sort: [[a,1]],
       upsert: true
     }, function(err, r) {
-      assert.equal(null, err);
       assert.equal(1, r.value.b);
     }
   )
-  
+
   //Read Documents
   db.collection('users').find({a:1}).limit(2).toArray(function(err, docs) {
-    assert.equal(null, err)
     assert.equal(2, docs.length)
     db.close()
   })
-  
+
 })
 ```
