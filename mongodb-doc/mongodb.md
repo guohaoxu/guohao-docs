@@ -114,7 +114,16 @@ $isolated
 var MongoClient = require('mongodb').MongoClient
 var url = 'mongodb://localhost:27017/myproject'
 MongoClient.connect(url, function(err, db) {
-  //
+  db.collection('users').find({a:1}).skip(1).limit(2).sort([['a', 1]]).toArray(function(err, docs){})
+  db.collection('users').insertOne({a:1}, function(err, r){})
+  db.collection('users').insertMany([{a:1}, {a:3}], function(err, r){})
+  db.collection('users').updateOne({a:1}, {$set:{b:1}}, function(err, r){})
+  db.collection('users').updateMany({a:2}, {$set:{b:1}}, function(err, r){})
+  db.collection('users').deleteOne({a:1}, function(err,r){})
+  db.collcetion('users').deleteMany({a:2}, function(err, r){})
+  db.collections('users').findOneAndUpdate({a:1}, {$set:{b:1}}, function(err,r){})
+  db.collections('users').findOneAndDelete({a:1}, function(err,r){})
+
   db.close()
 })
 
@@ -130,60 +139,7 @@ co(function*() {
   console.log(err.stack)
 })
 
-//Insert Documents
-var MongoClient = require('mongodb').MongoClient
- , assert = require('assert')
-
-var url = 'mongodb://localhost:27017/myproject'
-MongoClient.connect(url, function(err, db) {
-  assert.equal(null, err)
-  console.log("Connected correctly to server")
-
-  // Insert document
-  db.collection('users').insertOne({a:1}, function(err, r) {
-    assert.equal(1, r.insertedCount)
-    db.close()
-  })
-  db.collection('users').insertMany([{a:2}, {a:3}], function(err, r) {
-    assert.equal(2, r.insertedCount)
-    db.close()
-  })
-
-  // Update documents
-  db.collection('users').updateOne({a:1}, {$set: {b: 1}}, function(err, r) {
-    assert.equal(1, r.matchedCount)
-    assert.equal(1, r.modifiedCount)
-  })
-  db.collection('users').updateOne({a:3}, {$set: {b: 1}}, {
-      upsert: true
-    }, function(err, r) {
-      assert.equal(null, err);
-      assert.equal(0, r.matchedCount);
-      assert.equal(1, r.upsertedCount);
-      db.close()
-    }
-  )
-
-  //Removing Documents
-  db.collection('users').deleteOne({a:1}, function(err, r) {
-    assert.equal(1, r.deletedCount)
-  })
-
-  db.collection('users').findOneAndUpdate({a:1}, {$set: {b: 1}},
-    {
-      returnOriginal: false,
-      sort: [[a,1]],
-      upsert: true
-    }, function(err, r) {
-      assert.equal(1, r.value.b);
-    }
-  )
-
-  //Read Documents
-  db.collection('users').find({a:1}).limit(2).toArray(function(err, docs) {
-    assert.equal(2, docs.length)
-    db.close()
-  })
-
 })
 ```
+# mongoose
+```javascript
