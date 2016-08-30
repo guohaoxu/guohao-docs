@@ -141,5 +141,46 @@ co(function*() {
 
 })
 ```
+
 # mongoose
 ```javascript
+var mongoose = require('mongoose')
+mongoose.Promise = global.Promise
+mongoose.connect(dbURL)
+  .then(() => console.log('mongoose connection successful'))
+  .catch((error) => console.error(error))
+```
+### mongoose Model methods
+```javascript
+var tankSchema = new mongoose.Schema({
+  name: String,
+  size: String
+})
+// Schema Types
+String Number Date Buffer Boolean Mixed ObjectId Array
+// Instace methods
+tankSchema.methods.speak = function () {}
+// Static methods
+tankSchema.statics.getFive = function () {}
+
+var Tank = mongoose.model('Tank', tankSchema)
+
+
+var small = new Tank({size: 'bbb'})
+small.save(function (err) {
+  if (err) return console.error(err)
+  // saved!
+})
+
+Tank.create({size: 'small'}, callback)
+// Querying
+Tank.find({size: 'small'}).exec(callback)
+Tank.findById(id, callback)
+Tank.findByIdAndUpdate(id, {}, callback)
+Tank.findByIdAndRemove(id, {}, callback)
+Tank.findOne(query, callback)
+Tank.findOneAndUpdate(query, callback)
+Tank.findOneAndRemove(query, callback)
+Tank.update({size: 'large'}, {}, function(err) {})
+Tank.remove({size: 'large'}, function(err) {})
+```
