@@ -172,15 +172,20 @@ small.save(function (err) {
   // saved!
 })
 
-Tank.create({size: 'small'}, callback)
-// Querying
-Tank.find({size: 'small'}).exec(callback)
-Tank.findById(id, callback)
-Tank.findByIdAndUpdate(id, {}, callback)
-Tank.findByIdAndRemove(id, {}, callback)
-Tank.findOne(query, callback)
-Tank.findOneAndUpdate(query, callback)
-Tank.findOneAndRemove(query, callback)
-Tank.update({size: 'large'}, {}, function(err) {})
-Tank.remove({size: 'large'}, function(err) {})
+Model.create(doc, [callback(error, doc)])
+Model.find(query, [fields], [options], [callback(error, docs)])
+Model.update(query, update, [options], [callbcak(error, affectedCount, raw)])
+Model.remove(query, [callback(error)])
+
+Model.populate(docs, options, [callbcak(error, doc)])
+
+Model.findOne(query, [fields], [options], [callback(error, doc)])
+Model.findOndeAndUpdate(query, update, [options], [callback(error, doc)])
+Model.findOndeAndRemove(query, [options], [callback(error, doc)])
+
+Model.findById(id, [fields], [options], [callback(error, doc)])
+Model.findByIdAndUpdate(id, update, [options], [callback(error, doc)])
+Model.findByIdAndRemove(id, [options], [callback(error, doc)])
+
+Model.find(query).limit(10).exec(callback)
 ```
