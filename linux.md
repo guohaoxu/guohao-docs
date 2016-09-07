@@ -6,7 +6,7 @@
 $ sudo apt install ssh
 $ sudo /etc/init.d/ssh start
 ```
-### 安装varnish
+### 安装Varnish
 ```bash
 $ sudo apt install varnish
 # set /etc/varnish/default.vcl
@@ -26,4 +26,14 @@ ExecStart=/usr/sbin/varnishd -a :80 ....
 $ systemctl /etc/systemd/system/reload varnish.service
 
 $ service varnish start
+```
+### 安装Nginx
+```bash
+$ sudo apt install nginx
+# set /et/nginx/sites-eabled
+server {
+  listen 8080 default_server;
+  listen [::]:8080 default_server;
+  ...
+}
 ```
