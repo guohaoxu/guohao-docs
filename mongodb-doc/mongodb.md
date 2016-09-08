@@ -19,6 +19,11 @@ show dbs	#显示数据库
 use test	#使用test数据库
 db.dropDatabase()	#删除数据库
 db.collection.drop()	#删除集合
+
+mongoimport -d guohao-blog -c users users.json
+mongoexport -d guohao-blog -c users -o users.json
+mongodump -h localhost -d guohao-blog -o dump
+mongorestore -h localhost -d guohao-blog dump/guohao-blog --drop
 ```
 
 #### Create Operations
