@@ -9,9 +9,8 @@
 **设置**
 
 `$ git config --global user.name "username"`
-
 `$ git config --global user.email "useremail@qq.com"`
-
+`$ git config --global core.autocrlf false`
 `$ git config --list"` 查看设置信息
 
 **创建SSH Key**
