@@ -6,6 +6,18 @@
 $ sudo apt install ssh
 $ sudo /etc/init.d/ssh start
 ```
+
+### 安装Nginx
+```bash
+$ sudo apt install nginx
+# set /et/nginx/sites-eabled
+server {
+  listen 8080 default_server;
+  listen [::]:8080 default_server;
+  ...
+}
+```
+
 ### 安装Varnish
 ```bash
 $ sudo apt install varnish
@@ -27,13 +39,23 @@ $ systemctl /etc/systemd/system/reload varnish.service
 
 $ service varnish start
 ```
-### 安装Nginx
+
+### usable command
 ```bash
-$ sudo apt install nginx
-# set /et/nginx/sites-eabled
-server {
-  listen 8080 default_server;
-  listen [::]:8080 default_server;
-  ...
-}
+$ who
+guohao   tty2         2017-03-01 16:19 (:1)
+$ whoami
+guohao
+$ grep guohao /etc/passwd
+$ hostname
+guohao:x:1000:1000:guohao,,,:/home/guohao:/bin/bash
+$ date
+2017年 03月 01日 星期三 16:21:38 CST
+$ hostname
+guohao-VirtualBox
+$ pwd
+/home/guohao
+$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+$ tar -cvf backup.tar /home/guohao
 ```
